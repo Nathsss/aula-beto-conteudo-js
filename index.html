@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BETO CONTEUDO</title>
+  </head>
+  <style></style>
+  <body></body>
+  <script>
+    const ifms = 5; // constantes (arrays ou objs)
+
+    // Objeto
+    const person = { firstName: "Beto", lastName: "Campos" };
+
+    // Vetor, Array ...
+    const car = ["fusca", "gol", "uno"];
+
+    let a = 10;
+    // estrutura condicional
+    if (a < 6) {
+      console.log("a é menor q 6");
+    } else if (a > 6) {
+      console.log("a é maior que 6");
+    } else {
+      console.log("a = 6");
+    }
+    // operador ternário
+    a > 5 ? console.log("a é maior que 5") : console.log("n é maior que 5");
+
+    // switch ... case
+    let marvin = "robot";
+    switch (marvin) {
+      case "human":
+        console.log("sou humano!");
+        break;
+      case "alien":
+        console.log("vou dominar o mundo");
+        break;
+      case "robot":
+        console.log("sou um robo");
+        break;
+      default:
+        console.log("o que é vc?");
+        break;
+    }
+
+    // estruturas de repetição
+    let cont = [5, 2];
+    while (cont[0] + cont[1] < 15) {
+      cont[0] += 1;
+      cont[1] += 2;
+      document.write("<br> cont0 =  " + cont[0] + " cont1 = " + cont[1]);
+    }
+
+    do {
+      cont[0] += 1;
+      cont[1] += 2;
+      document.write("<br> cont0 =  " + cont[0] + " cont1 = " + cont[1]);
+    } while (cont[0] + cont[1] < 15);
+
+    let ifms = [5, 2, 3];
+    for (let i = 0; i < 3; i++) {
+      cont[i]++;
+    }
+    console.log(cont);
+    console.log(ifms);
+    //funções AULA
+
+    function inArray(array, valor) {
+      for (item in array) {
+        array[item] += valor;
+      }
+      return array;
+    }
+    const r = inArray([1, 3, 4], 4);
+    // console.log(r); // [5, 7, 8]
+
+    // arrow function
+    const x = () => {};
+
+    const soma = (a, b) => {
+      return a + b;
+    };
+
+    // arrow function
+    const x = () => {};
+
+    // const soma = (a, b) => { return a+b }
+    // const soma = (a, b) => a + b;
+    // console.log(soma(5, 3)); Vai exibir 8 no console
+    let open = document.querySelector("article");
+    let mask = document.querySelector(".mask");
+    let btn = document.querySelector("button");
+
+    function showMore() {
+      open.classList.toggle("open");
+      if (open.classList.contains("open")) {
+        // remove a class mask
+        mask.classList.remove("mask");
+        btn.innerHTML = "Mostrar menos";
+      } else {
+        btn.innerHTML = "Mostrar mais";
+        mask.classList.add("mask");
+      }
+    }
+    //eventlistener 
+    botao.addEventListener('click', AdicionarNovaTarefa)
+    filtro_texto.addEventListener('input', filtrarTarefas)
+    filtro.addEventListener('change', filtrarTarefas)
+    // puxa do local storage e armazena local storage
+    localStorage.setItem('lista', JSON.stringify(lista));
+    const tarefa_armazenada = localStorage.getItem('lista')
+    //lista local storage
+    let lista = []
+    let itensAMostra = []
+  </script>
+</html>
